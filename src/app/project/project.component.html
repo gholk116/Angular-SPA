@@ -1,0 +1,51 @@
+<div class="twotable">
+    <div class="child">
+        <div class="header">
+            <h2>Resource Catalog</h2>
+            <div class="resourceBtn">
+                <input type="button" value="=>">
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let column of this.columnInfo" textContent="column['columnName:']" >
+                        {{ column["columnName:"].toUpperCase() }}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of this.tableDetail">
+                    <td *ngFor="let column of this.columnInfo">
+                        {{ row.content[column.id] }} 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="child">
+        <div class="header">
+            <h2>Project Catalog</h2>
+            <div class="trash">
+                <input type="button" value="-">
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let column of this.projectColumnInfo">
+                        {{ column["columnName:"].toUpperCase() }}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of this.projectTableDetail">
+                    <td *ngFor="let column of this.projectColumnInfo">
+                        {{ row.content[column.id] }} 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

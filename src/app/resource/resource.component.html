@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="filter">
+        <input type="text" placeholder="keyword" [(ngModel)]="keyword">
+        <input type="button" value="Search">
+    </div>
+    <h2>Resource Catalog</h2>
+    <div class="dropdown">
+        <input type="button" value="+">
+        <div class="dropdown-content">
+            <p (click)="addRow()">Add Row</p>
+            <p (click)="addColumn()">Add Column</p>
+            <p>Import CSV</p>
+        </div>
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let column of this.columnInfo" contenteditable="true" textContent="column['columnName:']" 
+                (input)="onColumnNameChanged($event, column['columnName:'])">{{ column["columnName:"].toUpperCase() }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of this.tableDetail" [ngClass]="filter(row.resourceId)">
+            <td *ngFor="let column of this.columnInfo" contenteditable="true"  textContent="row.content[column.id]" (input)="onDataChanged($event, row.resourceId, column.id)">
+                {{ row.content[column.id] }} 
+            </td>
+        </tr>
+    </tbody>
+</table>

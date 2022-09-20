@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px black solid;
+    margin-top: 0px;
+}
+
+.header h1 {
+    background-color: rgb(255, 123, 0);
+    color: white;
+    height: 100%;
+    padding: 5px 20px;
+    text-shadow: 1px 1px grey;
+}
+
+.header img {
+    margin-right: 50px;
+    width: 45px; 
+    height: 45px;
+}
+
+.header img:hover {
+    cursor: pointer;
+}
+
+nav {
+    height: 100%; /* 100% Full-height */
+    width: 150px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    margin-top: 50px;
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px; /* Place content 60px from the top */
+    transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+}
+
+nav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+  }
+
+nav a:hover {
+    color: white;
+}
+
+.component {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+

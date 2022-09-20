@@ -1,0 +1,52 @@
+
+<div class="login-container">
+    <form>
+        <div class="container" *ngIf="!signup">
+            <h1 class="heading">Login</h1>
+            <div class="input">
+                <label class="text">Username</label>
+                <br>
+                <input type="text" placeholder="user123" name="username" [(ngModel)]="username">
+            </div>
+            <div class="input">
+                <label class="text">Password</label>
+                <br>
+                <input type="text" placeholder="1234" name="password" [(ngModel)]="password">
+            </div>
+            <div class="submitBtn">
+                <input type="submit" id="loginBtn" value="Login" (click)="login()">
+            </div> 
+            <div class="rememberMe">
+                <input type="checkbox" name="rememberMe">
+                <label>Remember me</label>
+            </div> 
+            <div class="bottomRow">
+                <input type="button" value="Sign up" (click)="signup = true">
+                <a href="">Forgot password?</a>
+            </div> 
+            <div>
+                <p class="formvalid" *ngIf="invalidLogin">Incorrect username/password.</p>
+            </div>
+        </div>
+        
+        <div class="container" *ngIf="signup">
+            <h1 class="heading">Register</h1>
+            <div class="input">
+                <label class="text">Username</label>
+                <br>
+                <input type="text" placeholder="user123" name="username" [(ngModel)]="username">
+            </div>
+            <div class="input">
+                <label class="text">Password</label>
+                <br>
+                <input type="text" placeholder="1234" name="password" [(ngModel)]="password">
+            </div>
+            <div class="submitBtn">
+                <input type="submit" value="Register" (click)="register()">
+            </div> 
+            <div class="submitBtn">
+                <input type="button" value="Have an account?" (click)="signup = false">
+            </div> 
+        </div>
+    </form>
+</div>

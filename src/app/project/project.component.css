@@ -1,0 +1,68 @@
+body{
+    width:100%;
+    height: 100%
+}
+.header {
+    display: flex;
+    background-color: gray;
+    width: 402px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    align-items: center;
+    height: 40px;
+    text-align: center;
+}
+.header input {
+    height: 50%;
+    margin: 10px;
+}
+
+.header input[type=button] {
+    background-color: orangered;
+    border: 1px solid black;
+    color: white;
+    margin-left: 50px;
+}
+
+.twotable {
+    display: flex;
+}
+
+.child {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+table {
+    width: 402px;
+    empty-cells: show;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-padding: 0;
+    display: block;
+    height: 250px;
+}
+
+th, td{
+    text-align: left;
+    border: 1px solid black;
+    min-width: 191px;
+    padding: 3px;
+}
+thead, tbody {
+    overflow-x: overlay;
+    width: 400px;
+    
+}
+
+tbody {
+    overflow-x: overlay;
+    overflow-y: overlay;
+    scroll-padding: 0;
+    height: 100px;
+    width: 400px;
+    padding: 0;
+}
